@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Platform Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Text Processor</h1>
+            <p class="subtitle">Enter text to be processed by the backend</p>
+            <form id="processingForm">
+                <div class="form-group">
+                    <label for="userInput">Input Text:</label>
+                    <input type="text" id="userInput" name="userInput" placeholder="Enter your text here..." required>
+                </div>
+                <button type="submit" class="btn-submit">Process Text</button>
+            </form>
+            <div id="resultContainer" class="result-container" style="display: none;">
+                <h2>Result</h2>
+                <div class="result-item">
+                    <p class="label">Original:</p>
+                    <p class="value" id="originalText"></p>
+                </div>
+                <div class="result-item">
+                    <p class="label">Processed:</p>
+                    <p class="value" id="processedText"></p>
+                </div>
+                <div class="result-item">
+                    <p class="label">Timestamp:</p>
+                    <p class="value" id="timestamp"></p>
+                </div>
+            </div>
+            <div id="errorContainer" class="error-container" style="display: none;">
+                <p id="errorMessage"></p>
+            </div>
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
